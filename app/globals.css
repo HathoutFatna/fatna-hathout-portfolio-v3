@@ -8,13 +8,18 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-lora);
+
+  --color-light: #f6f7f7;
+  --color-grayish: #9aa7a1;
+  --color-mid: #818181;
+  --color-dark: #5f6080;
+  --color-accent: #dffff4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #222222;
     --foreground: #ededed;
   }
 }
@@ -22,5 +27,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-lora), serif;
+}
+
+.main-container {
+  @apply flex flex-col items-center justify-center 
+         w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
