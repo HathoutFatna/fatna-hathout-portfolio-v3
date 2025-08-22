@@ -27,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.variable} ${lora.variable} antialiased bg-background text-foreground`}
-      >
+      <body className={`${montserrat.variable} ${lora.variable} dark`}>
         <Navbar />
         {children}
       </body>
