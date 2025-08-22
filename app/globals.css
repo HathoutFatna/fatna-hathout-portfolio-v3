@@ -72,3 +72,36 @@ body {
   @apply fixed top-0 right-0 h-full w-64 bg-[#F6F7F7] dark:bg-[#818181]
          z-50 shadow-lg flex flex-col p-6 space-y-6 transform transition-transform duration-300;
 }
+
+/* Hero Section */
+.hero-container {
+  @apply min-h-[calc(100vh-100px)] flex flex-col justify-center items-center 
+         space-y-6 sm:space-y-7 px-4;
+}
+
+.hero-text {
+  @apply space-y-10 flex flex-col justify-center items-center text-center;
+}
+
+.hero-title {
+  font-family: var(--font-lora), serif;
+  @apply font-bold text-[40px] sm:text-[48px] md:text-[58px];
+}
+
+.hero-intro {
+  @apply space-y-3;
+}
+
+.hero-cta {
+  @apply rounded bg-accent cursor-pointer text-[18px] sm:text-[20px] 
+         dark:text-black text-black font-semibold 
+         px-6 sm:px-7 py-3 mt-7;
+}
+
+.hero-scroll {
+  @apply space-y-5 flex flex-col justify-center items-center pt-7;
+}
+
+.hero-lottie {
+  @apply h-8 w-8 mt-10 cursor-pointer;
+}
