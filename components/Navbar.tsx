@@ -1,14 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 
-import logo from "../public/images/logo-f.svg";
 import logoWhite from "../public/images/logo-f-white.svg";
-import telegram from "../public/images/telegram.svg";
 import telegramWhite from "../public/images/telegram-white.svg";
 
 export const handleClick = (id: string) => {
@@ -24,14 +21,13 @@ export const handleClick = (id: string) => {
 };
 
 const Navbar: React.FC = () => {
-  const { theme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="navbar relative flex items-center justify-between px-4 py-3">
       {/* Logo */}
       <Image
-        src={theme === "dark" ? logoWhite : logo}
+        src={logoWhite}
         alt="Logo"
         className="h-auto w-auto max-w-[150px]"
         sizes="(max-width: 640px) 120px, 150px"
@@ -56,11 +52,7 @@ const Navbar: React.FC = () => {
         aria-label="Open contact section"
       >
         <div className="group-hover:rotate-45 transform transition-transform duration-200">
-          <Image
-            src={theme === "dark" ? telegramWhite : telegram}
-            alt="Telegram"
-            sizes="32px"
-          />
+          <Image src={telegramWhite} alt="Telegram" sizes="32px" />
         </div>
         <span>Let&apos;s talk</span>
       </div>

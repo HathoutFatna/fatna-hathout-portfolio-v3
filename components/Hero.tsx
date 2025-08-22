@@ -4,17 +4,12 @@ import React from "react";
 import { handleClick } from "./Navbar";
 import Lottie from "lottie-react";
 import scrollWhite from "../public/lotties/scroll-down-white.json";
-import scrollBlack from "../public/lotties/scroll-down-black.json";
-import { useTheme } from "next-themes";
 
 function Hero() {
-  const { theme } = useTheme();
-  const isDarkTheme = theme === "dark";
-
   return (
     <section className="hero-container">
       {/* Title + Intro */}
-      <div className="hero-text ">
+      <div className="hero-text">
         <h1 className="hero-title">Fatna Hathout</h1>
 
         <div className="hero-intro">
@@ -40,10 +35,7 @@ function Hero() {
       {/* Scroll Indicator */}
       <div className="hero-scroll">
         <div className="hero-lottie">
-          <Lottie
-            animationData={isDarkTheme ? scrollWhite : scrollBlack}
-            autoplay
-          />
+          <Lottie animationData={scrollWhite} autoplay />
         </div>
       </div>
     </section>
