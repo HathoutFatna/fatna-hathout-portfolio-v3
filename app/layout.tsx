@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Montserrat } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${lora.variable} antialiased bg-background text-foreground`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
