@@ -47,7 +47,7 @@ body {
 }
 
 .nav-link {
-  @apply cursor-pointer transition-colors hover:text-[#5F6080];
+  @apply cursor-pointer transition-colors hover:text-[#6fffe9];
 }
 
 .cta-button {
@@ -94,7 +94,7 @@ body {
 
 .hero-cta {
   @apply rounded bg-accent cursor-pointer text-[18px] sm:text-[20px] 
-         dark:text-black text-black font-semibold 
+         text-black font-semibold 
          px-6 sm:px-7 py-3 mt-7;
 }
 
@@ -117,7 +117,7 @@ body {
 
 .about-title {
   font-family: var(--font-lora), serif;
-  @apply text-[38px] font-bold;
+  @apply text-[38px] font-bold text-center;
 }
 
 .about-text {
@@ -143,4 +143,81 @@ body {
 .about-resume-btn {
   @apply bg-[#6FFFE9] rounded underline space-x-2 flex justify-center items-center 
   py-2.5 px-3 w-fit cursor-pointer text-black;
+}
+
+/* Project Card Styles */
+.project-card {
+  @apply rounded bg-[#112240] py-5 px-[18px] w-full space-y-5 transition-transform duration-300 ease-out h-full flex flex-col justify-between;
+}
+
+.project-card:hover {
+  @apply -translate-y-[10px];
+}
+
+.project-header {
+  @apply flex justify-between items-center;
+}
+
+.project-logo {
+  @apply w-auto max-w-full;
+}
+
+.project-links {
+  @apply flex items-center gap-2;
+}
+
+.icon {
+  @apply w-5 h-5 text-gray-300 transition-colors duration-200;
+}
+
+.arrow-icon:hover {
+  @apply text-[#64ffda];
+}
+
+.github-icon:hover {
+  @apply text-white;
+}
+
+.coming-soon {
+  @apply text-sm font-medium text-gray-400 italic;
+}
+
+.project-title {
+  @apply text-[20px] font-semibold transition-colors duration-200;
+}
+
+.project-card:hover .project-title {
+  @apply text-[#64ffda];
+}
+
+.project-card:hover .arrow-icon {
+  @apply text-[#64ffda];
+}
+
+.project-card:hover .github-icon {
+  @apply text-[#64ffda];
+}
+
+.project-description {
+  @apply text-sm text-gray-300;
+}
+
+.project-labels {
+  @apply space-x-2.5 flex flex-wrap space-y-2.5;
+}
+
+.project-label {
+  @apply rounded-[17px] bg-[#3a506b]/40 px-3 py-1.5 h-fit;
+}
+
+.label-text {
+  @apply text-sm font-semibold;
+}
+
+.coming-soon-label {
+  @apply rounded-full bg-[#64ffda] px-2.5 py-1;
+}
+
+.coming-soon-text {
+  @apply text-xs text-black font-medium;
 }
