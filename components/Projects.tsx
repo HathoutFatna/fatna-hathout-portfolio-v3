@@ -16,6 +16,7 @@ import taxibyatassi from "../public/images/taxibyatassi.svg";
 
 import ProjectCard from "./ProjectCard";
 import { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 type Project = {
   id: string;
@@ -58,7 +59,6 @@ const Projects: React.FC = () => {
         "Lablabee is an interactive e-learning platform offering hands-on labs in Telco Cloud technologies. I collaborated with the web team on feature implementation and UI enhancements for both the application and the website.",
       labels: ["React.js", "TypeScript", "MUI", "Webflow"],
     },
-
     {
       id: "resumai",
       image: resumai,
@@ -167,32 +167,79 @@ const Projects: React.FC = () => {
 
   return (
     <div>
-      <div
+      {/* Modern Projects */}
+      <motion.div
         className="flex flex-col justify-center items-center space-y-5 p-4 my-20"
         id="projects"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8 }}
       >
         <p className="about-subtitle">My Projects</p>
         <h2 className="about-title">What I’ve Been Building</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 w-full sm:px-10 lg:px-20 mt-5">
-          {projects.map((project) => {
-            return <ProjectCard project={project} key={project.id} />;
-          })}
-        </div>
-      </div>
-      <div
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-7 w-full sm:px-10 lg:px-20 mt-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6 }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      {/* Old Projects */}
+      <motion.div
         className="flex flex-col justify-center items-center space-y-5 p-4 my-20"
         id="old-projects"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8 }}
       >
         <p className="about-subtitle">Old Projects</p>
         <h2 className="about-title">From the Archives</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 w-full sm:px-10 lg:px-20 mt-5">
-          {oldProjects.map((project) => {
-            return <ProjectCard project={project} key={project.id} />;
-          })}
-        </div>
-      </div>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-7 w-full sm:px-10 lg:px-20 mt-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
+        >
+          {oldProjects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6 }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
