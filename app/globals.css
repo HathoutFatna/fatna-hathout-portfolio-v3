@@ -47,7 +47,7 @@ body {
 }
 
 .nav-link {
-  @apply cursor-pointer transition-colors hover:text-[#6fffe9];
+  @apply cursor-pointer transition-colors hover:text-accent;
 }
 
 .cta-button {
@@ -116,7 +116,7 @@ body {
 }
 
 .about-subtitle {
-  @apply text-[18px] font-semibold text-[#6FFFE9];
+  @apply text-[18px] font-semibold text-accent;
 }
 
 .about-title {
@@ -137,7 +137,7 @@ body {
 }
 
 .about-tech-icon {
-  @apply w-3 h-3 text-[#6FFFE9] rotate-135;
+  @apply w-3 h-3 text-accent rotate-135;
 }
 
 .about-resume {
@@ -236,7 +236,7 @@ body {
 }
 
 .contact-subtitle {
-  @apply text-[18px] font-semibold text-[#6FFFE9];
+  @apply text-[18px] font-semibold text-accent;
 }
 
 .contact-title {
@@ -252,4 +252,12 @@ body {
 
 .contact-cta:hover {
   @apply -translate-y-[10px];
+}
+
+.social-network-icon:hover {
+  @apply text-accent;
+}
+
+.social-network-icon {
+  @apply text-gray-300;
 }

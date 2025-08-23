@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import SocialNetworks from "@/components/SocialNetworks";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${lora.variable} dark`}>
         <Navbar />
         {children}
+        <SocialNetworks />
       </body>
     </html>
   );
