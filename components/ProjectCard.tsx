@@ -47,9 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   </Link>
                 )}
                 {project.link && (
-                  <Link href={project.link} target="_blank" aria-label="Visit">
-                    <SquareArrowOutUpRight className="icon arrow-icon" />
-                  </Link>
+                  <SquareArrowOutUpRight className="icon arrow-icon" />
                 )}
               </>
             )}
