@@ -95,7 +95,11 @@ body {
 .hero-cta {
   @apply rounded bg-accent cursor-pointer text-[18px] sm:text-[20px] 
          text-black font-semibold 
-         px-6 sm:px-7 py-3 mt-7;
+         px-6 sm:px-7 py-3 mt-7 transition-transform duration-300 ease-out;
+}
+
+.hero-cta:hover {
+  @apply -translate-y-[10px];
 }
 
 .hero-scroll {
@@ -141,8 +145,12 @@ body {
 }
 
 .about-resume-btn {
-  @apply bg-[#6FFFE9] rounded underline space-x-2 flex justify-center items-center 
-  py-2.5 px-3 w-fit cursor-pointer text-black;
+  @apply bg-[#6FFFE9] rounded space-x-2 flex justify-center items-center 
+  py-2.5 px-3 w-fit cursor-pointer text-black transition-transform duration-300 ease-out;
+}
+
+.about-resume-btn:hover {
+  @apply -translate-y-[10px];
 }
 
 /* Project Card Styles */
@@ -220,4 +228,28 @@ body {
 
 .coming-soon-text {
   @apply text-xs text-black font-medium;
+}
+
+/* Contact */
+.contact {
+  @apply flex flex-col justify-center items-center space-y-5 px-4 my-10 w-[80%] text-center;
+}
+
+.contact-subtitle {
+  @apply text-[18px] font-semibold text-[#6FFFE9];
+}
+
+.contact-title {
+  font-family: var(--font-lora), serif;
+  @apply text-[38px] font-bold text-center;
+}
+
+.contact-cta {
+  @apply rounded bg-accent cursor-pointer text-[18px] sm:text-[20px] 
+         text-black font-semibold 
+         px-6 sm:px-7 py-3 mt-7 transition-transform duration-300 ease-out;
+}
+
+.contact-cta:hover {
+  @apply -translate-y-[10px];
 }
