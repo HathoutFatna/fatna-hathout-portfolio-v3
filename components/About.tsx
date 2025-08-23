@@ -36,9 +36,9 @@ function About() {
         </p>
 
         <p>
-          These days, I’m focused on crafting responsive, accessible, and
-          performance-driven interfaces — always aiming for that balance between
-          aesthetics and usability.
+          These days I’m focused on creating interfaces that are responsive,
+          accessible and performance driven, with a constant goal of blending
+          great design with easy usability.
         </p>
 
         <ul className="about-tech">
