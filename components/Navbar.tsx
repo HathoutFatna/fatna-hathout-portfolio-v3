@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import { Send } from "lucide-react";
 
 import logoWhite from "../public/images/logo-f-white.svg";
-import telegramWhite from "../public/images/telegram-white.svg";
 
 export const handleClick = (id: string) => {
   const element = document.getElementById(id);
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
         aria-label="Open contact section"
       >
         <div className="group-hover:rotate-45 transform transition-transform duration-200">
-          <Image src={telegramWhite} alt="Telegram" sizes="32px" />
+          <Send />
         </div>
         <span>Let&apos;s talk</span>
       </div>
