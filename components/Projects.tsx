@@ -9,6 +9,7 @@ import wcodoo from "../public/images/wc-odoo.png";
 import aidex from "../public/images/aidex.png";
 import cloudie from "../public/images/cloudie.png";
 import resumai from "../public/images/resumai.png";
+import monolithstudio from "../public/images/monolith-studio.png";
 import docs from "../public/images/docs.svg";
 import awabrows from "../public/images/awabrows.svg";
 import ansay from "../public/images/ansay.svg";
@@ -75,7 +76,7 @@ const Projects: React.FC = () => {
       link: "https://docs-clone-app.vercel.app/",
       description:
         "Docs is a collaborative text editor inspired by Google Docs. It includes real-time editing and shared workspaces for seamless team collaboration.",
-      labels: ["Next.js", "TypeScript", "TailwindCSS", "Convex", "Clerk"],
+      labels: ["Next.js", "TypeScript", "TailwindCSS", "Convex"],
     },
     {
       id: "diimaak-shipping-platform",
@@ -92,6 +93,15 @@ const Projects: React.FC = () => {
       image: taxibyatassi,
       title: "Taxi by Attassi - Landing Page",
       link: "https://www.taxibyatassi.fr/",
+      description:
+        "Monolith Studio is a conceptual website designed for a premium architecture agency. The goal was to create a dark and elegant aesthetic that reflects the strength of architectural design.",
+      labels: ["WordPress"],
+    },
+    {
+      id: "monolith-studio",
+      image: monolithstudio,
+      title: "Monolith Studio – Architecture Agency Website",
+      link: "https://monolith-studio-574613.webflow.io/",
       description:
         "A professional landing page for a taxi agency in France, designed to showcase services and make it easy for customers to get all the details they need.",
       labels: ["WordPress"],
